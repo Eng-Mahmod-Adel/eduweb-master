@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>course</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+  :root {
+    --secondary: #592edf;
+    --text: #000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    background-image: var(--primary);
+    font-family: sans-serif;
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+  }
+
+  .containers {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 990px) {
+    .containers {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .main-video,
+  .video-playlist {
+    width: 100%;
+  }
+  
+  main{
+    margin-top: 80px;
+  }
+  .main-video .title {
+    margin-top: 1rem;
+  }
+
+  .video-playlist .title {
+    padding-left: 1rem;
+  }
+
+  .video-playlist>p {
+    padding: 1rem;
+    color: var(--secondary);
+  }
+
+  .video-playlist .videos {
+    height: 70%;
+    /* overflow-y: auto; */
+  }
+
+  .video-playlist .videos::-webkit-scrollbar {
+    width: .4rem;
+    border-radius: .4rem;
+    background-color: #0005;
+  }
+
+  .video-playlist .videos::-webkit-scrollbar-thumb {
+    border-radius: .4rem;
+    background-color: #fff;
+  }
+
+  .video-playlist .videos .video {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 1rem;
+    margin-top: .1rem;
+    cursor: pointer;
+
+    border-radius: .5rem;
+  }
+
+  .video-playlist .videos .video:hover {
+    background-color: #0003;
+  }
+
+  .video-playlist .videos .video.active {
+    background-color: #0003;
+    color: var(--secondary);
+  }
+
+  .main-video video {
+    width: 100%;
+    border-radius: .5rem;
+  }
+
+  .video img {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    filter: invert(100%);
+  }
+
+  .video-playlist .videos .video.active img {
+    filter: invert(100%) sepia(100%) saturate(2000%) hue-rotate(360deg);
+  }
+
+  .video p {
+    margin-left: 2.5rem;
+  }
+
+  .video h3 {
+    width: 23rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font: 100 1rem sans-serif;
+    padding: 0 .5rem;
+  }
+</style>
+
+<body dir="rtl">
+    <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" id="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/WhatsApp Image 2023-08-06 at 11.02.59.jpg" width="150" height="50" alt="EduWeb logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo_1.png" width="162" height="50" alt="EduWeb logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+
+
+        </div>
+
+        <div class="navbar-list">
+
+          <form class="form__search">
+            <label for="search">
+              <input class="input" type="text" required="" placeholder="ابحث عن" id="search">
+              <div class="fancy-bg"></div>
+              <div class="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                  class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                  <g>
+                    <path
+                      d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <button class="btn close-btn " type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </label>
+
+          </form>
+
+
+          <!-- <li class="">
+            <a href="#home" class="navbar-link" data-nav-link>الكورسات</a>
+          </li> -->
+        </div>
+
+      </nav>
+
+      <div class="header-actions">
+
+
+
+        <button class="header-action-btn" aria-label="cart" title="Cart">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button>
+
+        <a href="/register.html" class="btn has-before">
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          <span class="span">سجل مجانا</span>
+
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+  <main class="containers">
+    <section class="main-video">
+      <video src="videos/manipulate text background.mp4" controls autoplay muted></video>
+      <h3 class="title">Title of the playing Video.</h3>
+    </section>
+
+    <section class="video-playlist">
+      <h3 class="title">Title of Video Playlist</h3>
+      <p>10 lessions &nbsp; . &nbsp; 50m 48s</p>
+      <div class="videos">
+
+      </div>
+    </section>
+  </main>
+  <script>
+
+    const main_video = document.querySelector('.main-video video');
+    const main_video_title = document.querySelector('.main-video .title');
+    const video_playlist = document.querySelector('.video-playlist .videos');
+
+    let data = [
+      {
+        'id': 'a1',
+        'title': 'manipulate text background',
+        'name': 'manipulate text background.mp4',
+        'duration': '2:47',
+      },
+      {
+        'id': 'a2',
+        'title': 'build gauge with css',
+        'name': 'build gauge with css.mp4',
+        'duration': '2:45',
+      },
+      {
+        'id': 'a3',
+        'title': '3D popup card',
+        'name': '3D popup card.mp4',
+        'duration': '24:49',
+      },
+
+      {
+        'id': 'a4',
+        'title': 'customize HTML5 form elements',
+        'name': 'customize HTML5 form elements.mp4',
+        'duration': '3:59',
+      },
+      {
+        'id': 'a5',
+        'title': 'custom select box',
+        'name': 'custom select box.mp4',
+        'duration': '4:25',
+      },
+      {
+        'id': 'a6',
+        'title': 'embed google map to contact form',
+        'name': 'embed google map to contact form.mp4',
+        'duration': '5:33',
+      },
+      {
+        'id': 'a7',
+        'title': 'password strength checker javascript web app',
+        'name': 'password strength checker javascript web app.mp4',
+        'duration': '0:29',
+      },
+
+      {
+        'id': 'a8',
+        'title': 'custom range slider',
+        'name': 'custom range slider.mp4',
+        'duration': '1:12',
+      },
+      {
+        'id': 'a10',
+        'title': 'animated shopping cart',
+        'name': 'animated shopping cart.mp4',
+        'duration': '3:38',
+      },
+      {
+        'id': 'a11',
+        'title': 'animated shopping cart',
+        'name': 'animated shopping cart.mp4',
+        'duration': '3:38',
+      },
+      {
+        'id': 'a12',
+        'title': 'animated shopping cart',
+        'name': 'animated shopping cart.mp4',
+        'duration': '3:38',
+      },
+      {
+        'id': 'a13',
+        'title': 'animated shopping cart',
+        'name': 'animated shopping cart.mp4',
+        'duration': '3:38',
+      },
+
+    ];
+
+    data.forEach((video, i) => {
+      let video_element = `
+                <div class="video" data-id="${video.id}">
+                    <img src="images/play.svg" alt="">
+                    <p>${i + 1 > 9 ? i + 1 : '0' + (i + 1)}. </p>
+                    <h3 class="title">${video.title}</h3>
+                    <p class="time">${video.duration}</p>
+                </div>
+    `;
+      video_playlist.innerHTML += video_element;
+    })
+
+    let videos = document.querySelectorAll('.video');
+    videos[0].classList.add('active');
+    videos[0].querySelector('img').src = 'images/pause.svg';
+
+    videos.forEach(selected_video => {
+      selected_video.onclick = () => {
+
+        for (all_videos of videos) {
+          all_videos.classList.remove('active');
+          all_videos.querySelector('img').src = 'images/play.svg';
+
+        }
+
+        selected_video.classList.add('active');
+        selected_video.querySelector('img').src = 'images/pause.svg';
+
+        let match_video = data.find(video => video.id == selected_video.dataset.id);
+        main_video.src = 'videos/' + match_video.name;
+        main_video_title.innerHTML = match_video.title;
+      }
+    });
+
+  </script>
+
+    <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/details.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Document</title>
+</head>
+
+<body dir="rtl">
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" id="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/WhatsApp Image 2023-08-06 at 11.02.59.jpg" width="150" height="50" alt="EduWeb logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo_1.png" width="162" height="50" alt="EduWeb logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+
+
+        </div>
+
+        <div class="navbar-list">
+
+          <form class="form__search">
+            <label for="search">
+              <input class="input" type="text" required="" placeholder="ابحث عن" id="search">
+              <div class="fancy-bg"></div>
+              <div class="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                  class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                  <g>
+                    <path
+                      d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+              <button class="btn close-btn " type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </label>
+
+          </form>
+
+
+          <!-- <li class="">
+            <a href="#home" class="navbar-link" data-nav-link>الكورسات</a>
+          </li> -->
+        </div>
+
+      </nav>
+
+      <div class="header-actions">
+
+
+
+        <button class="header-action-btn" aria-label="cart" title="Cart">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button>
+
+        <a href="/register.html" class="btn has-before">
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          <span class="span">سجل مجانا</span>
+
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+  <main>
+    <div class="img"></div>
+
+    <div class="containers">
+      <div class="right">
+        <video width="90%" src="/videos/3D popup card.mp4" poster="/assets/images/appDev.jpg" controls></video>
+      </div>
+      <div class="left">
+        <div class="card">
+          <!-- <div class="card-image"></div> -->
+          <div class="heading">
+            <h3>A heading that must span over two lines</h3>
+            <div class="author">
+              <ul>
+                <li>
+                  <ion-icon name="volume-high"></ion-icon>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                </li>
+                <li>
+                  <ion-icon name="cellular"></ion-icon>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                </li>
+                <li>
+                  <ion-icon name="play"></ion-icon>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                </li>
+                <li>
+                  <ion-icon name="time"></ion-icon>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="btns">
+            <a href="register.html" class=" btn">
+              سجل الان
+            </a>
+            <a href="register.html" class=" btn">
+              اضف للعربة
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="details">
+      <h2 class="title">عن الدورة</h2>
+      <div class="user">
+        <img src="/assets/images/course-1.jpg" alt="">
+        <div>
+          <h4 class="title">محمود عادل</h4>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="about-course">
+        قد يشعر بعض الآباء والأمهات بالقلق عند اقتراب دخول أبنائهم المدرسة؛ وذلك لأنهم لا يعلمون كيفية اختيار أفضل
+        المدارس التي تساعد أبناءهم على التنشئة الصحيحة والتعليم باستخدام أفضل الوسائل التكنولوجية الحديثة، أيضًا توجد
+        العديد من المخاوف بشأن المقابلات التي تجريها المدارس مع الآباء والأبناء وعليها يتوقف قبول الأبناء بالمدرسة؛ لذلك
+        تم إعداد هذه الدورة التدريبية للقضاء على جميع تلك المخاوف والإجابة على جميع الأسئلة التي تتعلق بالمدارس والفرق
+        بين المدارس المحلية والدولية وكيفية الاختيار ونصائح حول اجتياز المقابلات والتحضير والاستعداد الجيد.
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is Web Development?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is HTML?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              HTML, aka HyperText Markup Language, is the dominant markup language for creating websites and anything
+              that can be viewed in a web browser.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What are some basic technical skills of a Front-End developer?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is HTTP?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              HTTP, aka HyperText Transfer Protocol, is the underlying protocol used by the World Wide Web and this
+              protocol defines how messages are formatted and transmitted, and what actions Web servers and browsers
+              should take in response to various commands.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            What is CORS?
+          </div>
+          <div class="accordion-item-body">
+            <div class="accordion-item-body-content">
+              CORS, aka Cross-Origin Resource Sharing, is a mechanism that enables many resources (e.g. images,
+              stylesheets, scripts, fonts) on a web page to be requested from another domain outside the domain from
+              which the resource originated.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <!-- <a href="#" class="logo">
+            <img src="./assets/images/logo-light.svg" width="162" height="50" alt="EduWeb logo">
+          </a> -->
+
+          <p class="footer-brand-text">
+            Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
+          </p>
+
+          <div class="wrapper">
+            <span class="span">Add:</span>
+
+            <address class="address">70-80 Upper St Norwich NR2</address>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Call:</span>
+
+            <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Email:</span>
+
+            <a href="mailto:info@eduweb.com" class="footer-link">info@eduweb.com</a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Online Platform</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Courses</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Events</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor Profile</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Purchase Guide</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">News & Articles</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ's</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sign In/Registration</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Coming Soon</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Contacts</p>
+
+          <p class="footer-list-text">
+            Enter your email address to register to our newsletter subscription
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+            <button type="submit" class="btn has-before">
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Subscribe</span>
+
+            </button>
+          </form>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2022 All Rights Reserved by <a href="#" class="copyright-link">dddddd</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="/assets/js/script.js" defer></script>
+  <script src="/assets/js/swiper-bundle.min.js"></script>
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
